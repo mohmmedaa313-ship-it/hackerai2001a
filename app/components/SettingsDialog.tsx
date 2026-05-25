@@ -18,7 +18,7 @@ import { ManageNotesDialog } from "@/app/components/ManageNotesDialog";
 import { CustomizeHackerAIDialog } from "@/app/components/CustomizeHackerAIDialog";
 import { SecurityTab } from "@/app/components/SecurityTab";
 import { PersonalizationTab } from "@/app/components/PersonalizationTab";
-import { AccountTab } from "@/app/components/AccountTab";
+import  AccountTab  from "@/app/components/AccountTab";
 import { DataControlsTab } from "@/app/components/DataControlsTab";
 import { TeamTab } from "@/app/components/TeamTab";
 import { AgentsTab } from "@/app/components/AgentsTab";
