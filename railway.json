@@ -1,0 +1,12 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "cd apps/web && npm install && npm run build",
+    "watchPatterns": ["apps/web/**"]
+  },
+  "deploy": {
+    "startCommand": "cd apps/web && npm run start",
+    "healthcheckPath": "/",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
