@@ -1,0 +1,32 @@
+[phases.setup]
+nixPkgs = [
+    "rustc",
+    "cargo",
+    "nodejs_22",
+    "pnpm",
+    "webkitgtk_4_1",
+    "pkg-config",
+    "openssl",
+    "gtk3",
+    "libappindicator-gtk3",
+    "librsvg",
+    "glib",
+    "cairo",
+    "pango",
+    "gdk-pixbuf",
+    "atk",
+    "gobject-introspection"
+]
+
+[phases.install]
+cmds = [
+    "pnpm install"
+]
+
+[phases.build]
+cmds = [
+    "pnpm --filter @hackerai/desktop build"
+]
+
+[start]
+cmd = "node packages/desktop/dist/server.js"  # أو أي أمر تشغيل
