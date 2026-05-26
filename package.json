@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"next dev --turbopack\" \"npx convex dev\"",
     "dev:local": "concurrently \"next dev --turbopack\" \"npx convex dev --local\"",
-    "dev:next": "next dev --turbopack",
+    "dev:next": "next dev --webpack",
     "dev:convex": "npx convex dev",
     "dev:trigger": "trigger dev",
     "dev:all": "concurrently \"next dev --turbopack\" \"npx convex dev\" \"trigger dev\"",
