@@ -1,10 +1,12 @@
+
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install && pnpm run build"
+    "buildCommand": "pnpm install && NODE_OPTIONS=\"--max-old-space-size=2048\" pnpm run build"
   },
   "deploy": {
-    "startCommand": "npx next start",
-    "healthcheckPath": "/"
+    "startCommand": "NODE_OPTIONS=\"--max-old-space-size=512\" npx next start -p 8080",
+    "healthcheckPath": "/",
+    "restartPolicyType": "ON_FAILURE"
   }
 }
