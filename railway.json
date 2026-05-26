@@ -1,21 +1,11 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install && pnpm run build",
-    "watchPatterns": ["app/**", "components/**", "lib/**", "convex/**"]
+    "buildCommand": "pnpm install && pnpm run build"
   },
   "deploy": {
     "startCommand": "pnpm run start",
     "healthcheckPath": "/",
     "restartPolicyType": "ON_FAILURE"
-  }
-}
-{
-  "build": {
-    "builder": "DOCKERFILE",
-    "dockerfilePath": "Dockerfile"
-  },
-  "deploy": {
-    "startCommand": ""
   }
 }
