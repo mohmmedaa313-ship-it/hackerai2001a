@@ -1,11 +1,11 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install && pnpm run build",
+    "buildCommand": "cd /app && pnpm install --filter !@hackerai/desktop && pnpm run build --filter !@hackerai/desktop",
     "watchPatterns": ["app/**", "components/**", "lib/**", "convex/**"]
   },
   "deploy": {
-    "startCommand": "pnpm run start",
+    "startCommand": "cd /app && pnpm run start",
     "healthcheckPath": "/",
     "restartPolicyType": "ON_FAILURE"
   }
