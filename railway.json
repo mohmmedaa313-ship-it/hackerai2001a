@@ -1,10 +1,10 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install --no-frozen-lockfile && NODE_OPTIONS=\"--max-old-space-size=2048\" npx next build --no-lint"
+    "buildCommand": "pnpm install --no-frozen-lockfile && NODE_OPTIONS=\"--max-old-space-size=2048\" pnpm run build"
   },
   "deploy": {
-    "startCommand": "NODE_OPTIONS=\"--max-old-space-size=512\" npx next start -p 8080",
+    "startCommand": "NODE_OPTIONS=\"--max-old-space-size=512\" pnpm run start",
     "healthcheckPath": "/"
   }
 }
